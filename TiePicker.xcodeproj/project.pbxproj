@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		551E6BF81DB70F7100904C10 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551E6BF71DB70F7100904C10 /* IntroViewController.swift */; };
+		55236AC81ECBF76900C5C1B5 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55236AC71ECBF76900C5C1B5 /* InstructionsViewController.swift */; };
+		55236ACA1ECC1B8100C5C1B5 /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55236AC91ECC1B8100C5C1B5 /* UIImageColors.swift */; };
+		555306191DA35CFA0076C233 /* TasteMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555306181DA35CFA0076C233 /* TasteMachine.swift */; };
+		5553061B1DA4ADC40076C233 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5553061A1DA4ADC40076C233 /* Product.swift */; };
+		555306501DA4B8EE0076C233 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5553064F1DA4B8EE0076C233 /* CloudKit.framework */; };
+		555306521DA5CA1C0076C233 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555306511DA5CA1C0076C233 /* DataStorage.swift */; };
+		55B406F21DB2C595000DDB5E /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B406F11DB2C595000DDB5E /* UIImageExtension.swift */; };
+		55FC28AD1D97592500A7D2FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC28AC1D97592500A7D2FB /* AppDelegate.swift */; };
+		55FC28AF1D97592500A7D2FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC28AE1D97592500A7D2FB /* ViewController.swift */; };
+		55FC28B21D97592500A7D2FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FC28B01D97592500A7D2FB /* Main.storyboard */; };
+		55FC28B51D97592500A7D2FB /* TiePicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55FC28B31D97592500A7D2FB /* TiePicker.xcdatamodeld */; };
+		55FC28B71D97592500A7D2FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FC28B61D97592500A7D2FB /* Assets.xcassets */; };
+		55FC28BA1D97592500A7D2FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FC28B81D97592500A7D2FB /* LaunchScreen.storyboard */; };
+		55FC28C51D97592500A7D2FB /* TiePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC28C41D97592500A7D2FB /* TiePickerTests.swift */; };
+		55FC28D01D97592500A7D2FB /* TiePickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC28CF1D97592500A7D2FB /* TiePickerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55FC28C11D97592500A7D2FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55FC28A11D97592500A7D2FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55FC28A81D97592500A7D2FB;
+			remoteInfo = TiePicker;
+		};
+		55FC28CC1D97592500A7D2FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55FC28A11D97592500A7D2FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55FC28A81D97592500A7D2FB;
+			remoteInfo = TiePicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		551E6BF71DB70F7100904C10 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		55236AC71ECBF76900C5C1B5 /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		55236AC91ECC1B8100C5C1B5 /* UIImageColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
+		555306181DA35CFA0076C233 /* TasteMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasteMachine.swift; sourceTree = "<group>"; };
+		5553061A1DA4ADC40076C233 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		5553064F1DA4B8EE0076C233 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		555306511DA5CA1C0076C233 /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		55B406F11DB2C595000DDB5E /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		55FC28A91D97592500A7D2FB /* TiePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FC28AC1D97592500A7D2FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55FC28AE1D97592500A7D2FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55FC28B11D97592500A7D2FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55FC28B41D97592500A7D2FB /* TiePicker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TiePicker.xcdatamodel; sourceTree = "<group>"; };
+		55FC28B61D97592500A7D2FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55FC28B91D97592500A7D2FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55FC28BB1D97592500A7D2FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55FC28C01D97592500A7D2FB /* TiePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FC28C41D97592500A7D2FB /* TiePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiePickerTests.swift; sourceTree = "<group>"; };
+		55FC28C61D97592500A7D2FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55FC28CB1D97592500A7D2FB /* TiePickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiePickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55FC28CF1D97592500A7D2FB /* TiePickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiePickerUITests.swift; sourceTree = "<group>"; };
+		55FC28D11D97592500A7D2FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55FC28DD1D97596300A7D2FB /* TiePicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TiePicker.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55FC28A61D97592500A7D2FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				555306501DA4B8EE0076C233 /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FC28BD1D97592500A7D2FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FC28C81D97592500A7D2FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5553064E1DA4B8EE0076C233 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5553064F1DA4B8EE0076C233 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55FC28A01D97592500A7D2FB = {
+			isa = PBXGroup;
+			children = (
+				55FC28AB1D97592500A7D2FB /* TiePicker */,
+				55FC28C31D97592500A7D2FB /* TiePickerTests */,
+				55FC28CE1D97592500A7D2FB /* TiePickerUITests */,
+				55FC28AA1D97592500A7D2FB /* Products */,
+				5553064E1DA4B8EE0076C233 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		55FC28AA1D97592500A7D2FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55FC28A91D97592500A7D2FB /* TiePicker.app */,
+				55FC28C01D97592500A7D2FB /* TiePickerTests.xctest */,
+				55FC28CB1D97592500A7D2FB /* TiePickerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55FC28AB1D97592500A7D2FB /* TiePicker */ = {
+			isa = PBXGroup;
+			children = (
+				55FC28DD1D97596300A7D2FB /* TiePicker.entitlements */,
+				55FC28AC1D97592500A7D2FB /* AppDelegate.swift */,
+				555306511DA5CA1C0076C233 /* DataStorage.swift */,
+				555306181DA35CFA0076C233 /* TasteMachine.swift */,
+				55FC28AE1D97592500A7D2FB /* ViewController.swift */,
+				55236AC91ECC1B8100C5C1B5 /* UIImageColors.swift */,
+				551E6BF71DB70F7100904C10 /* IntroViewController.swift */,
+				55B406F11DB2C595000DDB5E /* UIImageExtension.swift */,
+				5553061A1DA4ADC40076C233 /* Product.swift */,
+				55FC28B01D97592500A7D2FB /* Main.storyboard */,
+				55236AC71ECBF76900C5C1B5 /* InstructionsViewController.swift */,
+				55FC28B61D97592500A7D2FB /* Assets.xcassets */,
+				55FC28B81D97592500A7D2FB /* LaunchScreen.storyboard */,
+				55FC28BB1D97592500A7D2FB /* Info.plist */,
+				55FC28B31D97592500A7D2FB /* TiePicker.xcdatamodeld */,
+			);
+			path = TiePicker;
+			sourceTree = "<group>";
+		};
+		55FC28C31D97592500A7D2FB /* TiePickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				55FC28C41D97592500A7D2FB /* TiePickerTests.swift */,
+				55FC28C61D97592500A7D2FB /* Info.plist */,
+			);
+			path = TiePickerTests;
+			sourceTree = "<group>";
+		};
+		55FC28CE1D97592500A7D2FB /* TiePickerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				55FC28CF1D97592500A7D2FB /* TiePickerUITests.swift */,
+				55FC28D11D97592500A7D2FB /* Info.plist */,
+			);
+			path = TiePickerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55FC28A81D97592500A7D2FB /* TiePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55FC28D41D97592500A7D2FB /* Build configuration list for PBXNativeTarget "TiePicker" */;
+			buildPhases = (
+				55FC28A51D97592500A7D2FB /* Sources */,
+				55FC28A61D97592500A7D2FB /* Frameworks */,
+				55FC28A71D97592500A7D2FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TiePicker;
+			productName = TiePicker;
+			productReference = 55FC28A91D97592500A7D2FB /* TiePicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55FC28BF1D97592500A7D2FB /* TiePickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55FC28D71D97592500A7D2FB /* Build configuration list for PBXNativeTarget "TiePickerTests" */;
+			buildPhases = (
+				55FC28BC1D97592500A7D2FB /* Sources */,
+				55FC28BD1D97592500A7D2FB /* Frameworks */,
+				55FC28BE1D97592500A7D2FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55FC28C21D97592500A7D2FB /* PBXTargetDependency */,
+			);
+			name = TiePickerTests;
+			productName = TiePickerTests;
+			productReference = 55FC28C01D97592500A7D2FB /* TiePickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		55FC28CA1D97592500A7D2FB /* TiePickerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55FC28DA1D97592500A7D2FB /* Build configuration list for PBXNativeTarget "TiePickerUITests" */;
+			buildPhases = (
+				55FC28C71D97592500A7D2FB /* Sources */,
+				55FC28C81D97592500A7D2FB /* Frameworks */,
+				55FC28C91D97592500A7D2FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55FC28CD1D97592500A7D2FB /* PBXTargetDependency */,
+			);
+			name = TiePickerUITests;
+			productName = TiePickerUITests;
+			productReference = 55FC28CB1D97592500A7D2FB /* TiePickerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55FC28A11D97592500A7D2FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Simple Matters";
+				TargetAttributes = {
+					55FC28A81D97592500A7D2FB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = ZCEYGPU8ZJ;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					55FC28BF1D97592500A7D2FB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = ZCEYGPU8ZJ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 55FC28A81D97592500A7D2FB;
+					};
+					55FC28CA1D97592500A7D2FB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = ZCEYGPU8ZJ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 55FC28A81D97592500A7D2FB;
+					};
+				};
+			};
+			buildConfigurationList = 55FC28A41D97592500A7D2FB /* Build configuration list for PBXProject "TiePicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55FC28A01D97592500A7D2FB;
+			productRefGroup = 55FC28AA1D97592500A7D2FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55FC28A81D97592500A7D2FB /* TiePicker */,
+				55FC28BF1D97592500A7D2FB /* TiePickerTests */,
+				55FC28CA1D97592500A7D2FB /* TiePickerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55FC28A71D97592500A7D2FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FC28BA1D97592500A7D2FB /* LaunchScreen.storyboard in Resources */,
+				55FC28B71D97592500A7D2FB /* Assets.xcassets in Resources */,
+				55FC28B21D97592500A7D2FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FC28BE1D97592500A7D2FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FC28C91D97592500A7D2FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55FC28A51D97592500A7D2FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FC28B51D97592500A7D2FB /* TiePicker.xcdatamodeld in Sources */,
+				55FC28AF1D97592500A7D2FB /* ViewController.swift in Sources */,
+				55B406F21DB2C595000DDB5E /* UIImageExtension.swift in Sources */,
+				55236AC81ECBF76900C5C1B5 /* InstructionsViewController.swift in Sources */,
+				5553061B1DA4ADC40076C233 /* Product.swift in Sources */,
+				555306521DA5CA1C0076C233 /* DataStorage.swift in Sources */,
+				55FC28AD1D97592500A7D2FB /* AppDelegate.swift in Sources */,
+				555306191DA35CFA0076C233 /* TasteMachine.swift in Sources */,
+				551E6BF81DB70F7100904C10 /* IntroViewController.swift in Sources */,
+				55236ACA1ECC1B8100C5C1B5 /* UIImageColors.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FC28BC1D97592500A7D2FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FC28C51D97592500A7D2FB /* TiePickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55FC28C71D97592500A7D2FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55FC28D01D97592500A7D2FB /* TiePickerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55FC28C21D97592500A7D2FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55FC28A81D97592500A7D2FB /* TiePicker */;
+			targetProxy = 55FC28C11D97592500A7D2FB /* PBXContainerItemProxy */;
+		};
+		55FC28CD1D97592500A7D2FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55FC28A81D97592500A7D2FB /* TiePicker */;
+			targetProxy = 55FC28CC1D97592500A7D2FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55FC28B01D97592500A7D2FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55FC28B11D97592500A7D2FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55FC28B81D97592500A7D2FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55FC28B91D97592500A7D2FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55FC28D21D97592500A7D2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55FC28D31D97592500A7D2FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55FC28D51D97592500A7D2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TiePicker/TiePicker.entitlements;
+				DEVELOPMENT_TEAM = ZCEYGPU8ZJ;
+				INFOPLIST_FILE = TiePicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.simplematters.TiePicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		55FC28D61D97592500A7D2FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TiePicker/TiePicker.entitlements;
+				DEVELOPMENT_TEAM = ZCEYGPU8ZJ;
+				INFOPLIST_FILE = TiePicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.simplematters.TiePicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		55FC28D81D97592500A7D2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZCEYGPU8ZJ;
+				INFOPLIST_FILE = TiePickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.simplematters.TiePickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TiePicker.app/TiePicker";
+			};
+			name = Debug;
+		};
+		55FC28D91D97592500A7D2FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = ZCEYGPU8ZJ;
+				INFOPLIST_FILE = TiePickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.simplematters.TiePickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TiePicker.app/TiePicker";
+			};
+			name = Release;
+		};
+		55FC28DB1D97592500A7D2FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = ZCEYGPU8ZJ;
+				INFOPLIST_FILE = TiePickerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.simplematters.TiePickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TiePicker;
+			};
+			name = Debug;
+		};
+		55FC28DC1D97592500A7D2FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = ZCEYGPU8ZJ;
+				INFOPLIST_FILE = TiePickerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.simplematters.TiePickerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TiePicker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55FC28A41D97592500A7D2FB /* Build configuration list for PBXProject "TiePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FC28D21D97592500A7D2FB /* Debug */,
+				55FC28D31D97592500A7D2FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55FC28D41D97592500A7D2FB /* Build configuration list for PBXNativeTarget "TiePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FC28D51D97592500A7D2FB /* Debug */,
+				55FC28D61D97592500A7D2FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55FC28D71D97592500A7D2FB /* Build configuration list for PBXNativeTarget "TiePickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FC28D81D97592500A7D2FB /* Debug */,
+				55FC28D91D97592500A7D2FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55FC28DA1D97592500A7D2FB /* Build configuration list for PBXNativeTarget "TiePickerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55FC28DB1D97592500A7D2FB /* Debug */,
+				55FC28DC1D97592500A7D2FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55FC28B31D97592500A7D2FB /* TiePicker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55FC28B41D97592500A7D2FB /* TiePicker.xcdatamodel */,
+			);
+			currentVersion = 55FC28B41D97592500A7D2FB /* TiePicker.xcdatamodel */;
+			path = TiePicker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 55FC28A11D97592500A7D2FB /* Project object */;
+}
