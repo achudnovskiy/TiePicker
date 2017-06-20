@@ -12,8 +12,6 @@ import AVFoundation
 
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AVCapturePhotoCaptureDelegate{
-
-    let cameraIconTag = 100
     
     enum ActivityState {
         case PickShirt;
@@ -56,10 +54,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var lblJacket: UILabel!
     @IBOutlet weak var vwShirtColor: UIView!
     @IBOutlet weak var lblShirt: UILabel!
-//    @IBOutlet weak var vwTieColor: UIView!
-//    @IBOutlet weak var vwResultTie: UIView!
     @IBOutlet weak var lblHeader: UILabel!
-//    @IBOutlet weak var vwColours: UIView!
 
     @IBOutlet weak var vwCameraCircle: UIView!
     
@@ -78,13 +73,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         vwMask.layer.cornerRadius = vwMask.bounds.width/2
         
 
-        vwJacketColor.layer.borderColor = UIColor.darkGray.cgColor
-        vwJacketColor.layer.borderWidth = 5
+        vwJacketColor.layer.borderColor = UIColor.lightGray.cgColor
+        vwJacketColor.layer.borderWidth = 2
         vwJacketColor.layer.cornerRadius = vwJacketColor.bounds.width / 2
         vwJacketColor.layer.masksToBounds = true
 
-        vwShirtColor.layer.borderColor = UIColor.darkGray.cgColor
-        vwShirtColor.layer.borderWidth = 5
+        vwShirtColor.layer.borderColor = UIColor.lightGray.cgColor
+        vwShirtColor.layer.borderWidth = 2
         vwShirtColor.layer.cornerRadius = vwShirtColor.bounds.width / 2
         vwShirtColor.layer.masksToBounds = true
 
@@ -124,17 +119,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     
                 }
             } else {
-                print("issue here : captureSesssion.canAddInput")
+                NSLog("issue here : captureSesssion.canAddInput")
             }
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    
     
     //MARK: Tap gesture handlers
     
@@ -158,28 +146,33 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func chooseColorAction(_ sender: Any) {
-        self.transition(toFullScreen: !self.photoModeOn)
+        if self.photoModeOn {
+            self.takePicture()
+        }
+        else {
+            self.transition(toFullScreen: false)
+        }
     }
     
     func transition(toFullScreen:Bool) {
         DispatchQueue.main.async {
-            self.vwCameraCircle.isHidden = !toFullScreen
-            
             if toFullScreen {
+                self.vwCameraCircle.isHidden = false
                 self.propertyAnimator = UIViewPropertyAnimator(duration: 0.25, curve: .linear) {
                     self.vwEffects.effect = nil
                 }
             }
             else {
+                self.vwCameraCircle.isHidden = true
                 self.propertyAnimator =  UIViewPropertyAnimator(duration: 0.25, curve: .linear) {
                     self.vwEffects.effect = UIBlurEffect(style: .light)
                 }
+                
+                self.animateRoundCornersChange(newRadius: self.originalMaskBounds.width/2, duration:0.1)
             }
             self.propertyAnimator.startAnimation()
             
             UIView.animate(withDuration: 0.2, delay: 0, options: [.curveEaseIn], animations: {
-                self.vwMask.bounds = toFullScreen ? self.vwCameraBackground.bounds : self.originalMaskBounds
-                self.vwCameraIcon.tintColor = toFullScreen ? UIColor.white : UIColor.black
                 if toFullScreen {
                     self.vwMask.bounds = self.vwCameraBackground.bounds
                     self.vwCameraIcon.tintColor = UIColor.white
@@ -192,12 +185,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 }
             }) { (finished) in
                 self.photoModeOn = toFullScreen
-                self.animateRoundCornersChange(makeRound: !toFullScreen)
-                self.tapMaskView.isEnabled = !toFullScreen
+                if toFullScreen {
+                    self.photoModeOn = true
+                    self.tapMaskView.isEnabled = false
+                    self.animateRoundCornersChange(newRadius: 0, duration:0.1)
+                }
+                else {
+                    self.photoModeOn = false
+                    self.tapMaskView.isEnabled = true
+                }
             }
-        
         }
-
     }
     
 //    func snapCameraIconToPoint(point:CGPoint) {
@@ -215,16 +213,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //        
 //    }
     
-    func animateRoundCornersChange(makeRound:Bool) {
-        let newRadius = makeRound ? self.vwMask.bounds.width / 2 : 0
-        
+    func animateRoundCornersChange(newRadius:CGFloat, duration:Double) {
         let animation = CABasicAnimation(keyPath: "cornerRadius")
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         animation.fillMode = kCAFillModeForwards
         animation.isRemovedOnCompletion = false
         animation.fromValue = self.vwMask.layer.cornerRadius
         animation.toValue = newRadius
-        animation.duration = 0.1
+        animation.duration = duration
         self.vwMask.layer.add(animation, forKey: "cornerRadius")
         self.vwMask.layer.cornerRadius = newRadius
     }
@@ -240,15 +236,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let image = UIImage(data: imageData)!
             let chosenColor = image.extractDominantColor()
             
-            self.currentState = self.nextState(currentState: self.currentState)
             if self.currentState == .PickShirt {
                 self.vwShirtColor.backgroundColor = chosenColor
             }
             else {
                 self.vwJacketColor.backgroundColor = chosenColor
             }
-            
         }
+        self.updateUI(currentState: self.currentState)
+        self.currentState = self.nextState(currentState: self.currentState)
+        self.transition(toFullScreen: !self.photoModeOn)
     }
     
     
@@ -264,15 +261,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func updateUI(currentState:ActivityState) {
-        if currentState == .PickShirt {
+        switch currentState {
+        case .PickShirt:
+            lblShirt.isHidden = true
+            vwShirtColor.isHidden = true
+            break;
+        case .PickJacket:
             lblShirt.isHidden = false
             vwShirtColor.isHidden = false
-        }
-        else if currentState == .PickJacket {
+        case .ShowResult:
             lblJacket.isHidden = false
-            vwShirtColor.isHidden = false
+            vwJacketColor.isHidden = false
         }
-    
+        
+        vwShirtColor.backgroundColor = chosenShirtColor
+        vwJacketColor.backgroundColor = chosenJacketColor
+        
         lblHeader.text = self.headerTextForState(currentState)
     }
 
@@ -289,16 +293,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-//       
-//    private func suggestTie() {
-//        if chosenShirtColor != nil && chosenJacketColor != nil {
-//            let tasteInput = [keyShirtColor:chosenShirtColor!,
-//                              keyJacketColor:chosenJacketColor!]
-//            let tasteMachine = TasteMachine(input: tasteInput)
-//            chosenTieColor = tasteMachine.pickTieColor()
-//        }
-//        
-//        moveStepForward()
-//    }
+       
+    private func suggestColor() {
+        if chosenShirtColor != nil && chosenJacketColor != nil {
+            let tasteInput = [keyShirtColor:chosenShirtColor!,
+                              keyJacketColor:chosenJacketColor!]
+            let tasteMachine = TasteMachine(input: tasteInput)
+            chosenTieColor = tasteMachine.pickTieColor()
+        }
+        
+        moveStepForward()
+    }
 }
 

@@ -306,7 +306,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -366,7 +366,7 @@
                                     <constraint firstAttribute="bottom" secondItem="CUF-qv-pwV" secondAttribute="bottom" id="wOO-oK-Fcf"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tt-f3-7Gm">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tt-f3-7Gm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" tag="199" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJt-sh-g7Q">
@@ -383,9 +383,6 @@
                                                         <constraint firstAttribute="height" constant="200" id="K5Z-Qd-yHw"/>
                                                         <constraint firstAttribute="width" constant="200" id="kvM-du-fpP"/>
                                                     </constraints>
-                                                    <connections>
-                                                        <outletCollection property="gestureRecognizers" destination="gq9-xe-GFF" appends="YES" id="eF0-eq-zNP"/>
-                                                    </connections>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -405,6 +402,9 @@
                                     <constraint firstAttribute="bottom" secondItem="DJt-sh-g7Q" secondAttribute="bottom" id="Bi1-XK-R6o"/>
                                     <constraint firstItem="DJt-sh-g7Q" firstAttribute="top" secondItem="8tt-f3-7Gm" secondAttribute="top" id="Loq-HE-DbM"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gq9-xe-GFF" appends="YES" id="oR9-1J-eJg"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BI0-EM-i4c">
                                 <rect key="frame" x="147" y="567" width="80" height="80"/>
